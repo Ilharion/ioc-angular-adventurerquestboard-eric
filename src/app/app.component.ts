@@ -9,5 +9,8 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'ioc-angular-adventurerquestboard-eric';
+
+  constructor() {
+    console.log("Adventurer Quest Board iniciat correctament - Eric");
+  }
 }
