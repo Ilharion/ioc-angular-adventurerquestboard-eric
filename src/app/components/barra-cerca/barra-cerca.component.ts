@@ -11,11 +11,12 @@ import { FormsModule } from '@angular/forms';
 })
 export class BarraCercaComponent {
 
-  cerca: string = '';
-
   @Output() cercacanviada = new EventEmitter<string>();
 
-  onCerca() {
-    this.cercacanviada.emit(this.cerca);
+  textCerca: string = '';
+
+  onSubmit(){
+    this.cercacanviada.emit(this.textCerca);
   }
+ 
 }

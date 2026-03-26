@@ -1,5 +1,28 @@
-<input
-    type="text"
-    placeholder="Cercar..."
-    [(ngModel)]="cerca"
-    (input)="onCerca()">
+<form #cercaForm="ngForm" (ngSubmit)="onSubmit()">
+
+    <input
+        type="text"
+        name="cerca"
+        [(ngModel)]="textCerca"
+        required
+        minlength="3"
+        #cercaInput="ngModel"
+        placeholder="Cerca missions..."
+    />
+
+    <div *ngIf="cercaInput.invalid && cercaInput.touched">
+
+        <small *ngIf="cercaInput.errors?.['required']">
+            La cerca és obligatòria
+        </small>
+
+        <small *ngIf="cercaInput.errors?.['minlength']">
+            Mínim 3 caràcters
+        </small>
+    </div>
+
+    <button type="submit" [disabled]="cercaForm.invalid">
+        Cercar
+    </button>
+
+    </form>
