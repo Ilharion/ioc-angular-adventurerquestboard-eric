@@ -15,5 +15,5 @@ Adventurer Quest Board és una aplicació web desenvolupada amb angular que perm
 
 ## Estat del projecte actual
 
-Configuració inicial completada.
-Projecte angular creat, repositori Git configurat i estructura inicial de carpetes preparada.
+S'ha afegit una mostra del que es veurá a la aplicacio, treballant amb flux i afegit una barra de cerca.
+S'ha millorat la UI.
