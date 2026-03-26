@@ -1,6 +1,15 @@
-<div class="card">
-  <h3>{{ element.nom | uppercase }}</h3>
-  <p><strong>Rank:</strong> {{ element.rank }}</p>
-  <p><strong>Descripcio:</strong> {{ element.descripcio | slice:0:50 }}</p>
-  <p>{{ element.recompensa || 'Sense recompensa' }}</p>
+<div class="targeta" tabindex="0" role="article" aria-label="Missió">
+  
+  <div class="header">
+    <h3>{{ element.nom | uppercase }}</h3>
+  </div>
+
+  <div class="body">
+    <p><strong> Rank:</strong> {{ element.rank }}</p>
+    <p>{{ element.descripcio }}</p>
+  </div>
+  
+  <div class="footer">
+    <span class="recompensa"> {{ element.recompensa }}</span>
+  </div>
 </div>

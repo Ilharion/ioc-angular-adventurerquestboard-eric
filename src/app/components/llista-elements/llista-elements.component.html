@@ -1,4 +1,4 @@
-<div *ngIf="elements.length > 0; else senseResultats">
+<div *ngIf="elements.length > 0; else senseResultats" class="llista-elements">
 
     <div class="grid">
         <app-targeta-element
@@ -10,5 +10,7 @@
 </div>
 
 <ng-template #senseResultats>
-    <p class="no-resultats">No s'han trobat missions.</p>
+    <div class="senseresultats">
+        <h2>No s'han trobat missions.</h2>
+    </div>
 </ng-template>

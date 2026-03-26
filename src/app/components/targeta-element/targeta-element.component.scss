@@ -1,0 +1,51 @@
+.targeta {
+  background: #f4e4c1; /* paper vell */
+  color: #2b1a0f;
+  border: 2px solid #5a3b1e;
+  border-radius: 6px;
+
+  padding: 1rem;
+  position: relative;
+
+  font-family: 'Georgia', serif;
+
+  box-shadow: 4px 6px 10px rgba(0,0,0,0.6);
+  transform: rotate(-1deg);
+  transition: all 0.2s ease;
+}
+
+/* EFECTE PAPER */
+.targeta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('https://www.transparenttextures.com/patterns/paper.png');
+  opacity: 0.4;
+}
+
+
+.targeta::after {
+  content: "📌";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* HOVER */
+.targeta:hover {
+  transform: rotate(0deg) scale(1.03);
+}
+
+/* TÍTOL */
+.header h3 {
+  font-weight: bold;
+  text-align: center;
+}
+
+/* RECOMPENSA */
+.recompensa {
+  display: block;
+  text-align: right;
+  font-weight: bold;
+}

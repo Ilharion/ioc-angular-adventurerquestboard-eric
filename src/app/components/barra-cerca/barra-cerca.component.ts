@@ -1,11 +1,10 @@
 import { Component, Output, EventEmitter } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-barra-cerca',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [FormsModule],
   templateUrl: './barra-cerca.component.html',
   styleUrl: './barra-cerca.component.scss'
 })
@@ -15,7 +14,7 @@ export class BarraCercaComponent {
 
   textCerca: string = '';
 
-  onSubmit(){
+  onInputChange(){
     this.cercacanviada.emit(this.textCerca);
   }
  

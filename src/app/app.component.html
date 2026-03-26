@@ -1,19 +1,16 @@
+<main class="container">
 
+  <h1>Adventurer Quest Board</h1>
 
-<h1>Adventurer Quest Board</h1>
+    <!-- Barra de cerca-->
+    <app-barra-cerca
+      (cercacanviada)="onCerca($event)">
+    </app-barra-cerca>
 
-<app-barra-cerca (cercacanviada)="onCerca($event)"></app-barra-cerca>
+    <!-- Llista de misions -->
+    <app-llista-elements
+      [elements]="elementsFiltrats">
+    </app-llista-elements>
 
-<app-llista-elements [elements]="elementsFiltrats"></app-llista-elements>
-
-  <tbody>
-    <tr *ngFor="let element of elements">
-      <td>{{ element.id }}</td>
-      <td>{{ element.rank }}</td>
-      <td>{{ element.nom }}</td>
-      <td>{{ element.descripcio }}</td>
-      <td>{{ element.recompensa }}</td>
-    </tr>
-  </tbody>
-
+</main>
 

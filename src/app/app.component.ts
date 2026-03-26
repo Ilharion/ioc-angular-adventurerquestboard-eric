@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { DADES_MOCK } from './mocks/dades-mock';
 import { Element } from './models/element.model';
 import { LlistaElementsComponent } from './components/llista-elements/llista-elements.component';
@@ -9,7 +8,7 @@ import { BarraCercaComponent } from './components/barra-cerca/barra-cerca.compon
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, LlistaElementsComponent, BarraCercaComponent],
+  imports: [LlistaElementsComponent, BarraCercaComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -19,6 +18,12 @@ export class AppComponent {
   elementsFiltrats: Element[] = DADES_MOCK;
 
   onCerca(text: string) {
+
+    if (!text || text.trim() === ''){
+      this.elementsFiltrats = this.elements;
+     return;
+    }
+
     this.elementsFiltrats = this.elements.filter(e =>
       e.nom.toLowerCase().includes(text.toLowerCase())
     );

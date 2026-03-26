@@ -1,6 +1,44 @@
-.no-resultats {
-    text-align: center;
-    font-size: 20px;
-    color: red;
-    margin-top: 20px;
+.llista-elements {
+  display: grid;
+  gap: 1rem;
+}
+
+/* mòbil */
+@media (max-width: 768px) {
+  .llista-elements {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* tablet */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .llista-elements {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* desktop */
+@media (min-width: 1201px) {
+  .llista-elements {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.sense-resultats {
+  background: #f4e4c1;
+  border: 3px solid #5a3b1e;
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 2rem auto;
+
+  max-width: 500px;
+  text-align: center;
+
+  font-family: 'Georgia', serif;
+
+  box-shadow: 4px 6px 12px rgba(0,0,0,0.7);
+  transform: rotate(-1deg);
+
+  position: relative; 
+  z-index: 1;
 }
