@@ -2,8 +2,31 @@
 
 <h1>Adventurer Quest Board</h1>
 
-<p>Aplicació desenvolupada per Eric Fernàndez Rodríguez que gestiona un tauler de missions d'aventurers
-  Aquest projecte es part d'un modul del CFGS DAM
-</p>
+<app-barra-cerca (cercacanviada)="onCerca($event)"></app-barra-cerca>
 
-<router-outlet />
+<app-llista-elements [elements]="elementsFiltrats"></app-llista-elements>
+
+<p>Llistat d'elements disponibles:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Rank</th>
+      <th>Nom</th>
+      <th>Descripció</th>
+      <th>Recompensa</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let element of elements">
+      <td>{{ element.id }}</td>
+      <td>{{ element.rank }}</td>
+      <td>{{ element.nom }}</td>
+      <td>{{ element.descripcio }}</td>
+      <td>{{ element.recompensa }}</td>
+    </tr>
+  </tbody>
+</table>
+
