@@ -14,4 +14,9 @@ export class LlistaElementsComponent {
 
   @Input() elements: Element[] = [];
 
+  trackById(index: number, element: any): number {
+    return element.id;
+  }
 }
+
+  

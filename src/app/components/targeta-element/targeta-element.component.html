@@ -1,6 +1,6 @@
 <div class="card">
-  <h3>{{ element.nom }}</h3>
+  <h3>{{ element.nom | uppercase }}</h3>
   <p><strong>Rank:</strong> {{ element.rank }}</p>
-  <p><strong>Descripcio:</strong> {{ element.descripcio }}</p>
+  <p><strong>Descripcio:</strong> {{ element.descripcio | slice:0:50 }}</p>
   <p>{{ element.recompensa || 'Sense recompensa' }}</p>
 </div>

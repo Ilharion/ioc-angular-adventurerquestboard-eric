@@ -6,19 +6,6 @@
 
 <app-llista-elements [elements]="elementsFiltrats"></app-llista-elements>
 
-<p>Llistat d'elements disponibles:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Rank</th>
-      <th>Nom</th>
-      <th>Descripció</th>
-      <th>Recompensa</th>
-    </tr>
-  </thead>
-
   <tbody>
     <tr *ngFor="let element of elements">
       <td>{{ element.id }}</td>
@@ -28,5 +15,5 @@
       <td>{{ element.recompensa }}</td>
     </tr>
   </tbody>
-</table>
+
 
