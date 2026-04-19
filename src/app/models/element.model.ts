@@ -4,6 +4,7 @@ export interface Element {
     nom: string;
     descripcio: string;
     recompensa?: string;
+    popular?: boolean;
 }
 
 

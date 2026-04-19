@@ -19,22 +19,23 @@ export class ElementService {
 
   // OBTENIR POPULARS
 
-  obtenirPopulars(): void {
-    this.carregant.set(true);
-    this.error.set(null);
+ obtenirPopulars(): void {
+  this.carregant.set(true);
+  this.error.set(null);
 
-    this.http.get<Element[]>(`${this.apiUrl}/elements?popular=true`)
-      .subscribe({
-        next: (data) => {
-          this.elements.set(data);
-          this.carregant.set(false);
-        },
-        error: () => {
-          this.error.set("Error carregant les missions populars");
-          this.carregant.set(false);
-        }
-      });
-  }
+  this.http.get<Element[]>(`${this.apiUrl}/elements`)
+    .subscribe({
+      next: (data) => {
+        const populars = data.filter(e => e.popular === true);
+        this.elements.set(populars);
+        this.carregant.set(false);
+      },
+      error: () => {
+        this.error.set("Error carregant les missions populars");
+        this.carregant.set(false);
+      }
+    });
+}
 
  
   // CERCA PER NOM
@@ -43,18 +44,20 @@ export class ElementService {
     this.carregant.set(true);
     this.error.set(null);
 
-    const url = `${this.apiUrl}/elements?nom_like=${terme}`;
-
-    this.http.get<Element[]>(url)
+    this.http.get<Element[]>(`${this.apiUrl}/elements`)
       .subscribe({
         next: (data) => {
-          this.elements.set(data);
-          this.carregant.set(false);
-        },
-        error: () => {
-          this.error.set("Error en la cerca de missions");
-          this.carregant.set(false);
-        }
-      });
+          const filtrats = data.filter(e =>
+          e.nom.toLowerCase().includes(terme.toLowerCase())
+        );
+
+        this.elements.set(filtrats);
+        this.carregant.set(false);
+      },
+      error: () => {
+        this.error.set("Error en la cerca de missions");
+        this.carregant.set(false);
+      }
+    });
   }
 }
