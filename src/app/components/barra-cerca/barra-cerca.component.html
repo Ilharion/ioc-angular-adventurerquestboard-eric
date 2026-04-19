@@ -1,0 +1,23 @@
+<form class="cerca-form">
+
+    <label for="cercaInput" class="visually-hidden">Cerca missions</label>
+
+    <input
+        id="cercaInput"
+        type="text"
+        name="cerca"
+        [(ngModel)]="textCerca"
+        required
+        minlength="3"
+        #cercaInput="ngModel"
+        (input)="onInputChange()"
+        placeholder="Cerca missions..."
+    />
+
+    <div *ngIf="cercaInput.invalid || cercaInput.touched">
+        <small *ngIf="cercaInput.errors?.['minlength']">
+            Mínim 3 caràcters
+        </small>
+    </div>
+
+    </form>

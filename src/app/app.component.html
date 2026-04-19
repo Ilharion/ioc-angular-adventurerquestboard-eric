@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="contenidor">
 
   <!-- CARREGANT -->
@@ -35,3 +36,21 @@
   </div>
 
 </div>
+=======
+<main class="container">
+
+  <h1>Adventurer Quest Board</h1>
+
+    <!-- Barra de cerca-->
+    <app-barra-cerca
+      (cercacanviada)="onCerca($event)">
+    </app-barra-cerca>
+
+    <!-- Llista de misions -->
+    <app-llista-elements
+      [elements]="elementsFiltrats">
+    </app-llista-elements>
+
+</main>
+
+>>>>>>> ra2-components

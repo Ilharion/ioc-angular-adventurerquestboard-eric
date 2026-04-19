@@ -100,6 +100,10 @@
     }
   },
   "cli": {
+<<<<<<< HEAD
     "analytics": false
+=======
+    "analytics": "a206a7c7-8fdf-4580-bb63-76987896c35c"
+>>>>>>> ra2-components
   }
 }

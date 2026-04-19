@@ -1,27 +1,19 @@
-# IocAngularAdventurerquestboardEric
+# Adventurer Quest Board - Eric
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.21.
+## Descripció
+Adventurer Quest Board és una aplicació web desenvolupada amb angular que permet gestionar i simular un tauler de missions per a aventurers. L'aplicació permetrà consultar missions disponibles, veure els detalls, i a futur, permetrà crear i gestionar noves missions.
 
-## Development server
+## Stack Tècnic
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Angular 18
+- TypeScript
+- Standalone Architecture
+- SCSS (Sass)
+- Angular Routing
+- Node.js
+- Git i GitHub
 
-## Code scaffolding
+## Estat del projecte actual
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+S'ha afegit una mostra del que es veurá a la aplicacio, treballant amb flux i afegit una barra de cerca.
+S'ha millorat la UI.
