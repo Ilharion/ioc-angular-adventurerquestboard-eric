@@ -22,10 +22,14 @@
 
     <h1 class="titol">Catàleg de missions</h1>
 
-    <!-- BARRA DE CERCA -->
+    <!-- BARRA DE CERCA
     <app-barra-cerca
       (cercacanviada)="cercar($event)">
-    </app-barra-cerca>
+    </app-barra-cerca> -->
+
+    <app-formulari-cerca
+      (cercaCanviada)="onCerca($event)">
+    </app-formulari-cerca>
 
     <!-- RESULTATS -->
     <app-llista-elements

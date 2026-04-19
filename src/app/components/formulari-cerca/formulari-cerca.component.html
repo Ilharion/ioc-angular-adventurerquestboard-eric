@@ -1,0 +1,33 @@
+<form [formGroup]="form" (submit)="$event.preventDefault()">
+
+  <input
+    type="text"
+    formControlName="termeCerca"
+    placeholder="Cerca elements..."/>
+
+  <!-- Errors sincronics -->
+  <div *ngIf="form.get('termeCerca')?.touched">
+
+    <small *ngIf="form.get('termeCerca')?.errors?.['minlength']">
+      Mínim 2 caràcters
+    </small>
+
+    <small *ngIf="form.get('termeCerca')?.errors?.['maxlength']">
+      Màxim 50 caràcters
+    </small>
+
+    <small *ngIf="form.get('termeCerca')?.errors?.['sensResultats']">
+      No s'han trobat resultats
+    </small>
+
+  </div>
+
+  <!-- Loading async -->
+  <p *ngIf="loading">Validant...</p>
+
+  <!-- Botó netejar -->
+  <button type="button" *ngIf="form.value.termeCerca" (click)="netejar()">
+    Netejar
+  </button>
+
+</form>
