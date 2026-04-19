@@ -1,0 +1,19 @@
+.loading {
+  text-align: center;
+  font-size: 1.5rem;
+  color: gold;
+  padding: 2rem;
+}
+
+.error {
+  background: #ffdddd;
+  border: 2px solid red;
+  padding: 1rem;
+  text-align: center;
+}
+
+.error button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
