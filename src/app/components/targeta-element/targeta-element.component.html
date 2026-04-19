@@ -1,15 +1,21 @@
 <div class="targeta" tabindex="0" role="article" aria-label="Missió">
   
   <div class="header">
-    <h3>{{ element.nom | uppercase }}</h3>
+    <h3>{{ element.titol | uppercase }}</h3>
   </div>
 
   <div class="body">
-    <p><strong> Rank:</strong> {{ element.rank }}</p>
     <p>{{ element.descripcio }}</p>
   </div>
   
   <div class="footer">
-    <span class="recompensa"> {{ element.recompensa }}</span>
+    <span class="recompensa">
+      {{ element.preu }}
+    </span>
+
+    <span *ngIf="element.esPopular" class="popular">
+      Popular
+    </span>
   </div>
+
 </div>

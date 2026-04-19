@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Element } from '../../models/element.model';
+import { ElementCataleg } from '../../models/element-cataleg.model';
 import { TargetaElementComponent } from '../targeta-element/targeta-element.component';
 
 @Component({
@@ -12,7 +12,7 @@ import { TargetaElementComponent } from '../targeta-element/targeta-element.comp
 })
 export class LlistaElementsComponent {
 
-  @Input() elements: Element[] = [];
+  @Input() elements: ElementCataleg[] = [];
 
   trackById(index: number, element: any): number {
     return element.id;

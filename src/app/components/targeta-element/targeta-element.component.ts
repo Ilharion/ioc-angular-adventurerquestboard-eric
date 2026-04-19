@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Element } from '../../models/element.model';
+import { ElementCataleg } from '../../models/element-cataleg.model';
 
 @Component({
   selector: 'app-targeta-element',
@@ -11,5 +11,5 @@ import { Element } from '../../models/element.model';
 })
 export class TargetaElementComponent {
 
-  @Input() element!: Element;
+  @Input() element!: ElementCataleg;
 }
