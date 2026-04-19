@@ -1,54 +1,45 @@
 import { Component } from '@angular/core';
-<<<<<<< HEAD
 import { RouterOutlet } from '@angular/router';
-import { ElementService } from './services/element.service';
 import { CommonModule } from '@angular/common';
-=======
-import { DADES_MOCK } from './mocks/dades-mock';
-import { Element } from './models/element.model';
-import { LlistaElementsComponent } from './components/llista-elements/llista-elements.component';
-import { BarraCercaComponent } from './components/barra-cerca/barra-cerca.component';
 
->>>>>>> ra2-components
+import { ElementService } from './services/element.service';
+import { BarraCercaComponent } from './components/barra-cerca/barra-cerca.component';
+import { LlistaElementsComponent } from './components/llista-elements/llista-elements.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-<<<<<<< HEAD
-  imports: [RouterOutlet, CommonModule],
-=======
-  imports: [LlistaElementsComponent, BarraCercaComponent],
->>>>>>> ra2-components
+  imports: [RouterOutlet, CommonModule, BarraCercaComponent, LlistaElementsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-<<<<<<< HEAD
   title = 'ioc-angular-adventurerquestboard-eric';
 
   constructor(public elementService: ElementService) {}
 
-  ngOnInit(){
+  ngOnInit() {
     this.elementService.obtenirPopulars();
-=======
-
-  elements: Element[] = DADES_MOCK;
-  elementsFiltrats: Element[] = DADES_MOCK;
-
-  onCerca(text: string) {
-
-    if (!text || text.trim() === ''){
-      this.elementsFiltrats = this.elements;
-     return;
-    }
-
-    this.elementsFiltrats = this.elements.filter(e =>
-      e.nom.toLowerCase().includes(text.toLowerCase())
-    );
   }
 
-  constructor() {
-    console.log("Dades mock carregades correctament");
->>>>>>> ra2-components
+  // 👇 getters correctes
+  get carregant() {
+    return this.elementService.carregant();
+  }
+
+  get error() {
+    return this.elementService.error();
+  }
+
+  get elements() {
+    return this.elementService.elements();
+  }
+
+  carregarPopulars() {
+    this.elementService.obtenirPopulars();
+  }
+
+  cercar(text: string) {
+    this.elementService.cercar(text);
   }
 }

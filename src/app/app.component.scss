@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 .loading {
   text-align: center;
   font-size: 1.5rem;
@@ -17,7 +17,8 @@
   margin-top: 1rem;
   padding: 0.5rem 1rem;
   cursor: pointer;
-=======
+}
+
 .container { 
   max-width: 1200px;
   margin: auto;
@@ -64,7 +65,7 @@ body {
 
 @media (min-width: 1201px){
   .llista-elements {
-    grid-template-colums: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -92,5 +93,4 @@ body {
   font-weight: bold;
   border: 2px dashed red;
   border-radius: 10px;
->>>>>>> ra2-components
 }

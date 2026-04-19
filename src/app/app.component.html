@@ -1,56 +1,42 @@
-<<<<<<< HEAD
 <div class="contenidor">
 
-  <!-- CARREGANT -->
-  <div *ngIf="carregant()">
+  <!-- ESTAT: CARREGANT -->
+  <div *ngIf="carregant">
     <div class="spinner"></div>
-    <p>Carregant dades...</p>
+    <p class="missatge-info">Carregant dades...</p>
   </div>
 
-  <!-- ERROR -->
-  <div *ngIf="error()">
-    <p class="error">
-      {{ error() }}
+  <!-- ESTAT: ERROR -->
+  <div *ngIf="error">
+    <p class="missatge-error">
+      {{ error }}
     </p>
 
-    <button (click)="carregarPopulars()">
+    <button class="btn-reintentar" (click)="carregarPopulars()">
       Reintentar
     </button>
   </div>
 
-  <!-- CONTINGUT OK -->
-  <div *ngIf="!carregant() && !error()">
+  <!-- ESTAT: OK -->
+  <div *ngIf="!carregant && !error">
 
-    <h1>Catàleg de missions</h1>
+    <h1 class="titol">Catàleg de missions</h1>
 
-    <!-- Barra de cerca -->
+    <!-- BARRA DE CERCA -->
     <app-barra-cerca
-      (cercaCanviada)="cercar($event)">
+      (cercacanviada)="cercar($event)">
     </app-barra-cerca>
 
-    <!-- Llista -->
+    <!-- RESULTATS -->
     <app-llista-elements
-      [elements]="elements()">
+      [elements]="elements">
     </app-llista-elements>
+
+    <!-- MISSATGE SI NO HI HA RESULTATS -->
+    <p *ngIf="elements.length === 0" class="sense-resultats">
+      No s’han trobat missions
+    </p>
 
   </div>
 
 </div>
-=======
-<main class="container">
-
-  <h1>Adventurer Quest Board</h1>
-
-    <!-- Barra de cerca-->
-    <app-barra-cerca
-      (cercacanviada)="onCerca($event)">
-    </app-barra-cerca>
-
-    <!-- Llista de misions -->
-    <app-llista-elements
-      [elements]="elementsFiltrats">
-    </app-llista-elements>
-
-</main>
-
->>>>>>> ra2-components
