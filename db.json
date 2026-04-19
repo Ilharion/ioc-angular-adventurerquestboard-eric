@@ -3,6 +3,7 @@
     {
       "id": 1,
       "nom": "Subministrar el gremi d'alquimistes",
+      "rank": "F",
       "descripcio": "Recull mostres d'herbes Yurel.",
       "recompensa": "10 Freyns",
       "popular": true
@@ -10,6 +11,7 @@
     {
       "id": 2,
       "nom": "Batida de caça a l'oest de Telith",
+      "rank": "E",
       "descripcio": "Caça 10 llops al bosc d'Autum.",
       "recompensa": "5 Freyns",
       "popular": true
@@ -17,6 +19,7 @@
     {
       "id": 3,
       "nom": "Escolta al gremi de miners",
+      "rank": "D",
       "descripcio": "Protegeix Toghrim fins la mina nord.",
       "recompensa": "15 Freyns",
       "popular": false
@@ -24,6 +27,7 @@
     {
       "id": 4,
       "nom": "Investigació a la tomba del rei ghoul",
+      "rank": "C",
       "descripcio": "Descobreix què hi passa.",
       "recompensa": "20 Freyns",
       "popular": true
@@ -31,6 +35,7 @@
     {
       "id": 5,
       "nom": "Treball al camp",
+      "rank": "F",
       "descripcio": "Ajuda amb la collita.",
       "recompensa": "5 Freyns",
       "popular": false

@@ -6,7 +6,7 @@ export function adaptarElementApi(api: ElementApiResponse): ElementCataleg {
     id: api.id,
     titol: api.nom,
     descripcio: api.descripcio,
-    categoria: api.categoria,
+    categoria: api.rank,
     preu: api.recompensa,
     imatgeUrl: api.imatge,
     esPopular: api.popular,
