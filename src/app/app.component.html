@@ -22,10 +22,7 @@
 
     <h1 class="titol">Catàleg de missions</h1>
 
-    <div class="favorits-counter">
-  ⭐ Preferits: {{ preferitsService?.totalPreferits?.() }}
-    </div>
-
+    <app-preferits-panel></app-preferits-panel>
 
     <!-- BARRA DE CERCA
     <app-barra-cerca
@@ -45,7 +42,7 @@
     <p *ngIf="elements.length === 0" class="sense-resultats">
       No s’han trobat missions
     </p>
-
+    
   </div>
 
 </div>

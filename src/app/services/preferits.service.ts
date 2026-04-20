@@ -56,4 +56,46 @@ export class PreferitsService {
   esPreferit(id: string): boolean {
     return this.preferits().some(e => String(e.id) === String(id));
   }
+
+  afegirNota(id: string): void {
+  this.preferits.update(llista =>
+    llista.map(p =>
+      p.id === id
+        ? { ...p, notes: [...(p.notes || []), ''] }
+        : p
+    )
+  );
+
+  this.guardarPreferits();
+}
+
+  eliminarNota(id: string, index: number): void {
+  this.preferits.update(llista =>
+    llista.map(p =>
+      p.id === id
+        ? {
+            ...p,
+            notes: p.notes?.filter((_, i) => i !== index)
+          }
+        : p
+    )
+  );
+
+  this.guardarPreferits();
+  }
+
+  actualitzarNota(id: string, index: number, value: string): void {
+  this.preferits.update(list =>
+    list.map(el =>
+      el.id === id
+        ? {
+            ...el,
+            notes: el.notes?.map((n, i) =>
+              i === index ? value : n
+            )
+          }
+        : el
+    )
+  );
+  }
 }

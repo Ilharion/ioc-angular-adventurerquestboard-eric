@@ -8,7 +8,7 @@ import { PreferitsService } from './services/preferits.service';
 import { BarraCercaComponent } from './components/barra-cerca/barra-cerca.component';
 import { LlistaElementsComponent } from './components/llista-elements/llista-elements.component';
 import { FormulariCercaComponent } from './components/formulari-cerca/formulari-cerca.component';
-
+import { PreferitsPanelComponent } from './components/preferits-panel/preferits-panel.component';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +18,8 @@ import { FormulariCercaComponent } from './components/formulari-cerca/formulari-
     CommonModule,
     BarraCercaComponent,
     LlistaElementsComponent,
-    FormulariCercaComponent
+    FormulariCercaComponent,
+    PreferitsPanelComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

@@ -1,0 +1,33 @@
+<h2>⭐ Preferits ({{ preferitsService.totalPreferits() }})</h2>
+
+<div *ngFor="let element of preferitsService.preferits(); trackBy: trackById">
+
+  <h3>{{ element.titol }}</h3>
+
+  <!-- NOTES -->
+  <div>
+
+    <div *ngFor="let nota of element.notes; let i = index">
+
+      <input
+        [value]="nota"
+        (input)="preferitsService.actualitzarNota(element.id, i, $any($event.target).value)"
+        placeholder="Nota...">
+
+      <button (click)="preferitsService.eliminarNota(element.id, i)">
+        x
+      </button>
+
+      <small *ngIf="nota && nota.length < 3">
+        mínim 3 caràcters
+      </small>
+
+    </div>
+
+    <button (click)="preferitsService.afegirNota(element.id)">
+      +
+    </button>
+
+  </div>
+
+</div>
