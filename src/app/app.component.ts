@@ -3,27 +3,39 @@ import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 import { ElementService } from './services/element.service';
+import { PreferitsService } from './services/preferits.service';
+
 import { BarraCercaComponent } from './components/barra-cerca/barra-cerca.component';
 import { LlistaElementsComponent } from './components/llista-elements/llista-elements.component';
 import { FormulariCercaComponent } from './components/formulari-cerca/formulari-cerca.component';
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, BarraCercaComponent, LlistaElementsComponent, FormulariCercaComponent],
+  imports: [
+    RouterOutlet,
+    CommonModule,
+    BarraCercaComponent,
+    LlistaElementsComponent,
+    FormulariCercaComponent
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+
   title = 'ioc-angular-adventurerquestboard-eric';
 
-  constructor(public elementService: ElementService) {}
+  constructor(
+    public elementService: ElementService,
+    public preferitsService: PreferitsService
+  ) {}
 
   ngOnInit() {
     this.elementService.obtenirPopulars();
   }
 
-  // 👇 getters correctes
   get carregant() {
     return this.elementService.carregant();
   }

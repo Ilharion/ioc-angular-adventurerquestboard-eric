@@ -41,7 +41,7 @@ export class ElementService {
     this.carregant.set(true);
     this.error.set(null);
 
-    this.http.get<ElementApiResponse[]>(`${this.apiUrl}/elements?nom_like=${terme}`)
+    this.http.get<ElementApiResponse[]>(`${this.apiUrl}/elements?q=${terme}`)
       .subscribe({
         next: (data) => {
           const adaptats = adaptarElementsApi(data);

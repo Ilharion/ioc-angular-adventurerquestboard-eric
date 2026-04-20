@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, OnInit } from '@angular/core';
 import {
   FormControl,
   FormGroup,
@@ -19,37 +19,49 @@ import { environment } from '../../../environments/environment';
   templateUrl: './formulari-cerca.component.html',
   styleUrl: './formulari-cerca.component.scss'
 })
-export class FormulariCercaComponent {
+export class FormulariCercaComponent implements OnInit {
 
   @Output() cercaCanviada = new EventEmitter<string>();
 
   loading = false;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient) {}
 
-    // Cerca amb debounce
-    this.form.get('termeCerca')!.valueChanges
-      .pipe(debounceTime(400))
-      .subscribe(value => {
-        if (this.form.valid) {
-          this.cercaCanviada.emit(value || '');
-        }
-      });
-  }
-
-  // FORMULARI REACTIU
   form = new FormGroup({
     termeCerca: new FormControl('', {
       validators: [
         Validators.minLength(2),
         Validators.maxLength(50)
       ],
-      asyncValidators: [this.codiDisponibleValidator()],
+      asyncValidators: [],
       updateOn: 'change'
     })
   });
 
-  // VALIDATOR ASÍNCRON
+  ngOnInit(): void {
+
+    this.form.get('termeCerca')?.setAsyncValidators(
+      this.codiDisponibleValidator()
+    );
+
+    this.form.get('termeCerca')?.updateValueAndValidity();
+    this.form.get('termeCerca')!.valueChanges
+      .pipe(debounceTime(400))
+      .subscribe(value => {
+         
+         const text = value || '';
+
+        if (text.length >= 2) {
+          this.cercaCanviada.emit(text);
+        }
+
+        if (text.length === 0) {
+          this.cercaCanviada.emit('');
+        }
+
+      });
+  }
+
   codiDisponibleValidator(): AsyncValidatorFn {
     return (control: AbstractControl) => {
 
@@ -79,7 +91,6 @@ export class FormulariCercaComponent {
     };
   }
 
-  // NETEJAR
   netejar(): void {
     this.form.reset();
     this.cercaCanviada.emit('');

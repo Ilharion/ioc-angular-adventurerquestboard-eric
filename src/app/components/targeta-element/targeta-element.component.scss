@@ -49,3 +49,9 @@
   text-align: right;
   font-weight: bold;
 }
+
+.btn-favorit {
+  position: relative;
+  z-index: 9999;
+  pointer-events: auto;
+}

@@ -1,14 +1,26 @@
 <div class="targeta" tabindex="0" role="article" aria-label="Missió">
-  
+
   <div class="header">
+
     <h3>{{ element.titol | uppercase }}</h3>
+
+    <button
+      type="button"
+      class="btn-favorit"
+      (click)="togglePreferit(); $event.stopPropagation()">
+
+      {{ preferitsService.esPreferit(element.id) ? '⭐' : '☆' }}
+
+    </button>
+
   </div>
 
   <div class="body">
     <p>{{ element.descripcio }}</p>
   </div>
-  
+
   <div class="footer">
+
     <span class="recompensa">
       {{ element.preu }}
     </span>
@@ -16,6 +28,7 @@
     <span *ngIf="element.esPopular" class="popular">
       Popular
     </span>
+
   </div>
 
 </div>

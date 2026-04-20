@@ -22,6 +22,11 @@
 
     <h1 class="titol">Catàleg de missions</h1>
 
+    <div class="favorits-counter">
+  ⭐ Preferits: {{ preferitsService?.totalPreferits?.() }}
+    </div>
+
+
     <!-- BARRA DE CERCA
     <app-barra-cerca
       (cercacanviada)="cercar($event)">
