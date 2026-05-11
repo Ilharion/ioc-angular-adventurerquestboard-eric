@@ -1,0 +1,36 @@
+<nav class="nav">
+
+  <a routerLink="/cataleg" routerLinkActive="actiu">
+    Catàleg
+  </a>
+
+  <a routerLink="/cerca" routerLinkActive="actiu">
+    Cerca
+  </a>
+
+  <a routerLink="/preferits" routerLinkActive="actiu">
+    Preferits
+  </a>
+
+  <!-- 🔐 ESTAT AUTENTICACIÓ -->
+  <div class="auth">
+
+    <div *ngIf="usuari | async as user; else noAuth">
+
+      👤 {{ user.nom }}
+
+      <button (click)="authService.logout()">
+        Tancar sessió
+      </button>
+
+    </div>
+
+    <ng-template #noAuth>
+      <a routerLink="/login" routerLinkActive="actiu">
+        Login
+      </a>
+    </ng-template>
+
+  </div>
+
+</nav>

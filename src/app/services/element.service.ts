@@ -5,6 +5,7 @@ import { environment } from '../../environments/environment';
 import { ElementApiResponse } from '../models/element-api.model';
 import { ElementCataleg } from '../models/element-cataleg.model';
 import { adaptarElementsApi } from '../adaptadors/element.adaptador';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -54,4 +55,20 @@ export class ElementService {
         }
       });
   }
+
+  obtenirPerId(id: string) {
+  return this.http.get<any>(`${this.apiUrl}/elements/${id}`)
+    .pipe(
+      map(data => ({
+        id: data.id,
+        titol: data.nom,   // 👈 FIX IMPORTANT
+        descripcio: data.descripcio,
+        categoria: data.categoria,
+        preu: data.preu,
+        esPopular: data.esPopular,
+        imatgeUrl: data.imatgeUrl,
+        unitats: data.unitats
+      }))
+    );
+}
 }

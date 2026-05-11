@@ -1,0 +1,9 @@
+<div *ngIf="element; else noFound">
+
+  <app-targeta-element [element]="element"></app-targeta-element>
+
+</div>
+
+<ng-template #noFound>
+  <p>Element no trobat</p>
+</ng-template>
