@@ -2,11 +2,12 @@ import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ElementCataleg } from '../../models/element-cataleg.model';
 import { TargetaElementComponent } from '../targeta-element/targeta-element.component';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 @Component({
   selector: 'app-llista-elements',
   standalone: true,
-  imports: [CommonModule, TargetaElementComponent],
+  imports: [CommonModule, TargetaElementComponent, ScrollingModule],
   templateUrl: './llista-elements.component.html',
   styleUrl: './llista-elements.component.scss'
 })

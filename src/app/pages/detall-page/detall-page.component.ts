@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
+
 
 import { ElementService } from '../../services/element.service';
 import { ElementCataleg } from '../../models/element-cataleg.model';
@@ -10,6 +11,7 @@ import { TargetaElementComponent } from '../../components/targeta-element/target
   selector: 'app-detall-page',
   standalone: true,
   imports: [CommonModule, TargetaElementComponent],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './detall-page.component.html'
 })
 export class DetallPageComponent {

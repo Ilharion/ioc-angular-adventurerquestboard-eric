@@ -1,44 +1,63 @@
 {
   "elements": [
-    {
-      "id": 1,
-      "nom": "Subministrar el gremi d'alquimistes",
-      "rank": "F",
-      "descripcio": "Recull mostres d'herbes Yurel.",
-      "recompensa": "10 Freyns",
-      "popular": true
-    },
-    {
-      "id": 2,
-      "nom": "Batida de caça a l'oest de Telith",
-      "rank": "E",
-      "descripcio": "Caça 10 llops al bosc d'Autum.",
-      "recompensa": "5 Freyns",
-      "popular": true
-    },
-    {
-      "id": 3,
-      "nom": "Escolta al gremi de miners",
-      "rank": "D",
-      "descripcio": "Protegeix Toghrim fins la mina nord.",
-      "recompensa": "15 Freyns",
-      "popular": false
-    },
-    {
-      "id": 4,
-      "nom": "Investigació a la tomba del rei ghoul",
-      "rank": "C",
-      "descripcio": "Descobreix què hi passa.",
-      "recompensa": "20 Freyns",
-      "popular": true
-    },
-    {
-      "id": 5,
-      "nom": "Treball al camp",
-      "rank": "F",
-      "descripcio": "Ajuda amb la collita.",
-      "recompensa": "5 Freyns",
-      "popular": false
-    }
+    { "id": 1, "nom": "Subministrar el gremi d'alquimistes", "rank": "F", "descripcio": "Recull mostres d'herbes Yurel.", "recompensa": "10 Freyns", "popular": true },
+    { "id": 2, "nom": "Batida de caça a l'oest de Telith", "rank": "E", "descripcio": "Caça 10 llops al bosc d'Autum.", "recompensa": "5 Freyns", "popular": true },
+    { "id": 3, "nom": "Escolta al gremi de miners", "rank": "D", "descripcio": "Protegeix Toghrim fins la mina nord.", "recompensa": "15 Freyns", "popular": false },
+    { "id": 4, "nom": "Investigació a la tomba del rei ghoul", "rank": "C", "descripcio": "Descobreix què hi passa.", "recompensa": "20 Freyns", "popular": true },
+    { "id": 5, "nom": "Treball al camp", "rank": "F", "descripcio": "Ajuda amb la collita.", "recompensa": "5 Freyns", "popular": false },
+
+    { "id": 6, "nom": "Exploració de ruïnes antigues", "rank": "D", "descripcio": "Cartografia les ruïnes del nord.", "recompensa": "18 Freyns", "popular": false },
+    { "id": 7, "nom": "Missatge urgent a Valmora", "rank": "E", "descripcio": "Entrega un missatge secret.", "recompensa": "7 Freyns", "popular": false },
+    { "id": 8, "nom": "Caça de goblins al bosc fosc", "rank": "D", "descripcio": "Elimina 12 goblins.", "recompensa": "12 Freyns", "popular": true },
+    { "id": 9, "nom": "Protecció de caravanes comercials", "rank": "C", "descripcio": "Escolta una caravana fins a Brinthal.", "recompensa": "25 Freyns", "popular": true },
+    { "id": 10, "nom": "Recuperació d'artefacte perdut", "rank": "B", "descripcio": "Troba una relíquia antiga.", "recompensa": "40 Freyns", "popular": true },
+
+    { "id": 11, "nom": "Patrulla nocturna", "rank": "E", "descripcio": "Vigila les portes de la ciutat.", "recompensa": "8 Freyns", "popular": false },
+    { "id": 12, "nom": "Neteges al temple antic", "rank": "F", "descripcio": "Elimina criatures menors.", "recompensa": "6 Freyns", "popular": false },
+    { "id": 13, "nom": "Investigació arcana", "rank": "C", "descripcio": "Estudia fenòmens màgics.", "recompensa": "22 Freyns", "popular": true },
+    { "id": 14, "nom": "Missió de rescat", "rank": "B", "descripcio": "Rescata un noble desaparegut.", "recompensa": "35 Freyns", "popular": true },
+    { "id": 15, "nom": "Caça de bandits", "rank": "C", "descripcio": "Elimina la banda del sud.", "recompensa": "28 Freyns", "popular": true },
+
+    { "id": 16, "nom": "Recol·lecció de minerals rars", "rank": "D", "descripcio": "Aconsegueix cristalls de la mina.", "recompensa": "14 Freyns", "popular": false },
+    { "id": 17, "nom": "Defensa del poble de Nareth", "rank": "B", "descripcio": "Defensa contra invasors.", "recompensa": "50 Freyns", "popular": true },
+    { "id": 18, "nom": "Entrenament de reclutes", "rank": "E", "descripcio": "Ajuda a nous aventurers.", "recompensa": "10 Freyns", "popular": false },
+    { "id": 19, "nom": "Exploració de coves gelades", "rank": "C", "descripcio": "Explora les profunditats glaçades.", "recompensa": "30 Freyns", "popular": true },
+    { "id": 20, "nom": "Caça de monstres marins", "rank": "A", "descripcio": "Elimina una criatura del port.", "recompensa": "80 Freyns", "popular": true },
+
+    { "id": 21, "nom": "Reparació del pont destruït", "rank": "E", "descripcio": "Ajuda els enginyers locals.", "recompensa": "9 Freyns", "popular": false },
+    { "id": 22, "nom": "Espionatge a la ciutat rival", "rank": "B", "descripcio": "Recull informació estratègica.", "recompensa": "45 Freyns", "popular": true },
+    { "id": 23, "nom": "Caça de serps gegants", "rank": "D", "descripcio": "Elimina criatures del pantà.", "recompensa": "16 Freyns", "popular": false },
+    { "id": 24, "nom": "Protecció del ritual sagrat", "rank": "C", "descripcio": "Mantén el ritual segur.", "recompensa": "27 Freyns", "popular": true },
+    { "id": 25, "nom": "Recollida de plantes rares", "rank": "F", "descripcio": "Herbes per al mag del poble.", "recompensa": "5 Freyns", "popular": false },
+
+    { "id": 26, "nom": "Neteja del cementiri maleït", "rank": "C", "descripcio": "Elimina presències fosques.", "recompensa": "33 Freyns", "popular": true },
+    { "id": 27, "nom": "Caça de dracs menors", "rank": "A", "descripcio": "Elimina una cria de drac.", "recompensa": "90 Freyns", "popular": true },
+    { "id": 28, "nom": "Exploració del desert vermell", "rank": "D", "descripcio": "Cartografia zona perillosa.", "recompensa": "18 Freyns", "popular": false },
+    { "id": 29, "nom": "Missatge al rei", "rank": "B", "descripcio": "Entrega urgent al castell.", "recompensa": "38 Freyns", "popular": true },
+    { "id": 30, "nom": "Captura de fugitiu", "rank": "C", "descripcio": "Troba un criminal perillós.", "recompensa": "26 Freyns", "popular": true },
+
+    { "id": 31, "nom": "Investigació de portals màgics", "rank": "A", "descripcio": "Estudia anomalies arcàniques.", "recompensa": "85 Freyns", "popular": true },
+    { "id": 32, "nom": "Defensa de la torre del mag", "rank": "B", "descripcio": "Protegeix la torre.", "recompensa": "42 Freyns", "popular": true },
+    { "id": 33, "nom": "Caça de llops alfa", "rank": "D", "descripcio": "Elimina el líder de la manada.", "recompensa": "19 Freyns", "popular": false },
+    { "id": 34, "nom": "Recuperació de documents antics", "rank": "C", "descripcio": "Troba pergamins perduts.", "recompensa": "24 Freyns", "popular": true },
+    { "id": 35, "nom": "Exploració del volcà actiu", "rank": "A", "descripcio": "Investigació perillosa.", "recompensa": "95 Freyns", "popular": true },
+
+    { "id": 36, "nom": "Ajuda a la ferreria", "rank": "F", "descripcio": "Recol·lecta carbó.", "recompensa": "6 Freyns", "popular": false },
+    { "id": 37, "nom": "Caça de fantasmes", "rank": "C", "descripcio": "Neteja cases encantades.", "recompensa": "31 Freyns", "popular": true },
+    { "id": 38, "nom": "Protecció del rei durant viatge", "rank": "B", "descripcio": "Escolta reial.", "recompensa": "48 Freyns", "popular": true },
+    { "id": 39, "nom": "Recerca de tresors pirates", "rank": "A", "descripcio": "Troba botí perdut.", "recompensa": "100 Freyns", "popular": true },
+    { "id": 40, "nom": "Caça de dimonis menors", "rank": "B", "descripcio": "Elimina entitats fosques.", "recompensa": "55 Freyns", "popular": true },
+
+    { "id": 41, "nom": "Exploració de ciutat submergida", "rank": "A", "descripcio": "Investigació oceànica.", "recompensa": "110 Freyns", "popular": true },
+    { "id": 42, "nom": "Missió de diplomàcia", "rank": "C", "descripcio": "Negocia amb altres regnes.", "recompensa": "29 Freyns", "popular": false },
+    { "id": 43, "nom": "Caça de lladre local", "rank": "E", "descripcio": "Recupera objectes robats.", "recompensa": "11 Freyns", "popular": false },
+    { "id": 44, "nom": "Defensa del castell fronterer", "rank": "B", "descripcio": "Repel invasió enemiga.", "recompensa": "60 Freyns", "popular": true },
+    { "id": 45, "nom": "Investigació de criatures desconegudes", "rank": "A", "descripcio": "Estudia nova espècie.", "recompensa": "120 Freyns", "popular": true },
+
+    { "id": 46, "nom": "Recollida d'ingredients alquímics", "rank": "F", "descripcio": "Herbes per pocions.", "recompensa": "7 Freyns", "popular": false },
+    { "id": 47, "nom": "Caça de trolls del pont", "rank": "C", "descripcio": "Elimina amenaça local.", "recompensa": "34 Freyns", "popular": true },
+    { "id": 48, "nom": "Exploració de laberint antic", "rank": "B", "descripcio": "Troba sortida del laberint.", "recompensa": "70 Freyns", "popular": true },
+    { "id": 49, "nom": "Protecció del festival del poble", "rank": "E", "descripcio": "Mantén la seguretat.", "recompensa": "12 Freyns", "popular": false },
+    { "id": 50, "nom": "Última prova del gremi", "rank": "A", "descripcio": "Prova final d’elit.", "recompensa": "150 Freyns", "popular": true }
   ]
 }

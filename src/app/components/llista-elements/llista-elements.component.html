@@ -1,16 +1,21 @@
-<div *ngIf="elements.length > 0; else senseResultats" class="llista-elements">
+<div *ngIf="elements.length > 0; else senseResultats">
 
-    <div class="grid">
-        <app-targeta-element
-            *ngFor="let element of elements; trackBy: trackById"
-            [element]="element">
-        </app-targeta-element>
+  <cdk-virtual-scroll-viewport itemSize="140" style="height: 500px;">
+
+    <div *cdkVirtualFor="let element of elements; trackBy: trackById">
+
+      <app-targeta-element
+        [element]="element">
+      </app-targeta-element>
+
     </div>
+
+  </cdk-virtual-scroll-viewport>
 
 </div>
 
 <ng-template #senseResultats>
-    <div class="senseresultats">
-        <h2>No s'han trobat missions.</h2>
-    </div>
+  <div class="senseresultats">
+    <h2>No s'han trobat missions.</h2>
+  </div>
 </ng-template>
